@@ -1,5 +1,4 @@
 import {useEffect, useState} from "react";
-import {axiosService, urls} from "../../servises/axiosService";
 import {Post} from "../Post/Post";
 import {postsService} from "../../servises/postsService";
 import {UserPosts} from "../UserPosts/UserPosts";
