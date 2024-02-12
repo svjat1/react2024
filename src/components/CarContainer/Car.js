@@ -1,7 +1,11 @@
-import {useForm} from "react-hook-form";
+import {carService} from "../../services/carService";
 
-const Car = ({car}) => {
+const Car = ({car,setCarForUpdate,setTrigger}) => {
     const {id ,brand, price, year} = car
+    const deleteCar = async ()=>{
+        await carService.deleteById(id)
+        setTrigger(prev =>!prev)
+    }
 
     return (
         <div>
@@ -9,8 +13,8 @@ const Car = ({car}) => {
            <div>brand:{brand}</div>
            <div>price:{price}</div>
            <div>year:{year}</div>
-           <button>Update</button>
-           <button>Delete</button>
+           <button onClick={()=> setCarForUpdate(car)}>Update</button>
+           <button onClick={deleteCar}>Delete</button>
         </div>
     );
 };
