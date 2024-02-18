@@ -1,0 +1,8 @@
+.UserDetails ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.UserDetails li {
+    margin-bottom: 5px;
+}

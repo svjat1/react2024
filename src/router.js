@@ -22,7 +22,7 @@ const router = createBrowserRouter([
         ]
     },
     {
-        path:'post/:id', element:<PostDetailsPage/>
+        path:'posts/:id', element:<PostDetailsPage/>
     }
 ]);
 
