@@ -6,7 +6,7 @@ const Post = ({post}) => {
     return (
         <div>
             <div>TITLE : {title}</div>
-            <button onClick={()=>navigatePostDetails(`/posts/${id}`)}>Post-details</button>
+            <button onClick={()=>navigatePostDetails(`/posts/${id}`, {state:{id}})}>Post-details</button>
             <hr/>
         </div>
     );

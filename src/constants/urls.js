@@ -14,7 +14,8 @@ const urls = {
         byUserId:(id)=>`${posts}/${id}`
     },
     comments:{
-        base: comments
+        base: comments,
+        byId:(id)=> `${posts}/${id}${comments}`
     }
 }
 

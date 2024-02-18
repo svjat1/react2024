@@ -4,6 +4,7 @@ import {UsersPage} from "./pages/UsersPage";
 import {UserDetailsPage} from "./pages/UserDetailsPage";
 import {PostsPage} from "./pages/PostsPage";
 import {PostDetailsPage} from "./pages/PostDetailsPage";
+import {CommentsPage} from "./pages/CommentsPage";
 
 const router = createBrowserRouter([
     {
@@ -22,7 +23,11 @@ const router = createBrowserRouter([
         ]
     },
     {
-        path:'posts/:id', element:<PostDetailsPage/>
+        path:'posts/:id', element:<PostDetailsPage/>, children:[
+            {
+                path: '', element: <CommentsPage/>
+            }
+        ]
     }
 ]);
 
