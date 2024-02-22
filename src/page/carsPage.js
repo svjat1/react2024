@@ -1,7 +1,12 @@
+import {Cars} from "../components/CarsContainer/Cars";
+import {CarForm} from "../components/CarsContainer/CarForm";
+
 const CarsPage = () => {
     return (
         <div>
-            CarsPage
+            <CarForm/>
+            <hr/>
+            <Cars/>
         </div>
     );
 };

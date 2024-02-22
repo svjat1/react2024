@@ -9,8 +9,8 @@ const authService = {
         return apiService.post(urls.auth.register, data)
     },
     async login(user) {
-        const {data} = await apiService.post(urls.auth.login, user)
-        console.log(data);
+        const {data: {access}} = await apiService.post(urls.auth.login, user)
+        this.setToken(access)
     },
     me() {
         return apiService.get(urls.auth.me)

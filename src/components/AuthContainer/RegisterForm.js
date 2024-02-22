@@ -9,7 +9,7 @@ import {useNavigate} from "react-router-dom";
 const RegisterForm = () => {
     const [error, setError] = useState(null)
 
-    const {register, reset, handleSubmit, formState: {isValid, errors}} = useForm({
+    const {register, handleSubmit, formState: {isValid, errors}} = useForm({
         mode: "all",
         resolver: joiResolver(registerValidators)
     })
@@ -34,7 +34,7 @@ const RegisterForm = () => {
             {errors.password && <div>{errors.password.message}</div>}
             <div>Confirm Password: <input type="text" {...register('re_password')}/></div>
             {errors.re_password && <div>{errors.re_password.message}</div>}
-            <button>Register</button>
+            <button disabled={!isValid}>Register</button>
         </form>
     );
 };
