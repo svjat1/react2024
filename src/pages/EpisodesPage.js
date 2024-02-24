@@ -1,7 +1,9 @@
+import {Episodes} from "../components";
+
 const EpisodesPage = () => {
     return (
         <div>
-            EpisodesPage
+            <Episodes/>
         </div>
     );
 };
